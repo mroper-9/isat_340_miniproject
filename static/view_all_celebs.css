@@ -1,0 +1,25 @@
+/*cascade style sheet for login page */
+
+body{
+	background-color:#A3D0D3
+}
+
+img{
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+}
+
+table, td, th{
+    border: 1px solid black;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td{
+    padding: 8px;
+    font-family: "Lucida Console", Monospace;
+}

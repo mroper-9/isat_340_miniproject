@@ -1,0 +1,81 @@
+<!DOCTYPE html/>
+
+<html>
+
+<head>
+
+<title> </title>
+	<style type="text/css">body{background-color: lightcyan;}</style>
+<link type="text/css" rel="stylesheet" href="static/profile.css"/>
+</head>
+
+
+<body>
+<fieldset>
+	<legend>Profile information:</legend>
+
+<form action="" method="POST">
+<Table Border=1>
+
+<p>Please <b>update</b> your profile information on the following form
+<br>
+	<i><em>All fields are required and must contain valid information</em></i>
+</p>
+
+
+<p>
+<!--Member ID-->
+<TR align="left">
+	<TD> Member ID:</TD>
+	<TD><input type="text" name="memberID" value="{{memberID}}"></TD>
+</TR>
+
+<!--First Name-->
+<TR align="left">
+	<TD> First name:</TD>
+	<TD><input type="text" name="firstname" value="{{firstname}}"></TD>
+</TR>
+
+<!--Last Name-->
+<TR align="left">
+	<TD> Last name:</TD>
+	<TD><input type="text" name="lastname" value="{{lastname}}"></TD>
+</TR>
+
+<!--Age-->
+<TR align="left">
+	<TD> Age:</TD>
+	<TD><input type="text" name="age" value="{{age}}"></TD>
+</TR>
+
+<!--Email-->
+<TR align="left">
+	<TD> Email:</TD>
+	<TD><input type="text" name="email" value="{{email}}"> <i> e.g. user@domain.com </i> </TD>
+</TR>
+
+<!--Picture-->
+<TR>
+	<TD><img src="{{ url_for('static', filename='matt.jpg') }}" width="130" height="110"></TD>
+	<TD><textarea name="bio" rows=4 cols=50> </textarea></TD>
+</TR>
+
+<!--Submit Button-->
+<TR align="left">
+	<TD colspan="2"><input type="submit" value="Click to Update"></TD>
+</TR>
+
+</Table>
+</form>
+</fieldset>
+
+<a href="/view_all_celebs"> Click to view all of the celebrities </a>
+<br>
+<a href="/view_one_celeb"> Click to view one celebrity </a>
+
+{% if success %}
+<h3 style="color:magenta;">Data successfully submitted to the database!</h3>
+{% endif %}
+
+</body>
+</html>

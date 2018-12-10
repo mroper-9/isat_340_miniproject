@@ -1,0 +1,14 @@
+/*cascade style sheet for login page */
+
+body{
+	background-color:#0099D7
+}
+
+h1{
+	font-family: "Lucida Console", Monospace;
+	color: white;
+}
+
+h3{
+    color: red;
+}

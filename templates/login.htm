@@ -1,0 +1,22 @@
+<!doctype html/>
+<html xmlns="http://www.w3.org/1999/html">
+  <head>
+    <title>Flask App - login page</title>
+	<link type="text/css" rel="stylesheet" href="static/project_stylesheet.css"/>
+  </head>
+  <p>
+	<h1><center>Members ONLY. Please log into Celebrities</center></h1>
+      <br>
+      <form action="" method="post">
+        <center><input type="text" placeholder="Username" name="username" value="{{request.form.username }}"></center>
+		<br>
+        <center><input type="password" placeholder="Password" name="password" value="{{request.form.password }}"></center>
+		<br>
+        <center><input type="submit" value="Login"></center>
+      </form>
+      {% if error %}
+  <h3><center><strong>Login Error:</strong> {{ error }}</center></h3>
+      {% endif %}
+  
+  </body>
+</html>
